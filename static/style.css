@@ -1,0 +1,27 @@
+body {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 25px;
+	background-color: rgba(0,0,0,0.05);
+}
+
+#app {
+	min-height: 1080px;
+	background-color: #fff;
+	padding: 25px;
+	border: 1px #333;
+	box-shadow: 0 1px 3px rgba(26,26,26,0.2);
+	border-radius: 5px;
+}
+
+.title {
+	text-align: center;
+	margin: 5px;
+	margin-bottom: 16px;
+	line-height: 0.8em;
+	
+}
+
+.repo-badge {
+	text-align: center;
+}

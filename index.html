@@ -2,20 +2,38 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
-		<script src="./vue.js" type="text/javascript" charset="UTF-8"></script>
+		<title>Soulsign-scripts-build</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./static/style.css">
+		<script src="./static/vue.js" type="text/javascript" charset="UTF-8"></script>
+		<!--<script type="text/javascript" src="//vuejs.org/js/vue.min.js"></script>-->
+		<script type="text/javascript" src="//unpkg.com/uiv/dist/uiv.min.js"></script>
 	</head>
 	<body>
 		<div id="app">
-			{{ message }}
+			<div class="title"><h1>Soulsign-scripts-build</h1></div>
+			<div class="repo-badge"><img src="https://img.shields.io/github/license/yi-Xu-0100/soulsign-scripts-build"></div>
+			<div>
+				<dropdown ref="dropdown">
+					<btn type="primary" class="dropdown-toggle">选择模板 <span class="caret"></span></btn>
+					<template slot="dropdown">
+						<li><a role="button" type="primary" @click="show=!show">default(discuz.k)</a></li>
+					</template>
+				</dropdown>
+			</div>
+			    <collapse v-model="show">
+			      <div class="well" style="margin-bottom: 0">{{scripts}}</div>
+			    </collapse>
 		</div>
 		<script type="text/javascript">
 			var app = new Vue({
 				el: '#app',
 				data: {
-					message: 'Hello Vue!'
-				}
+					message: 'Hello Vue!',
+					show: false,
+					scripts: "discuz.k",
+				},
 			});
-			</script>
+		</script>
 	</body>
 </html>
